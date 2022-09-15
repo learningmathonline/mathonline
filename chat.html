@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under World</title>
+    <link rel="icon" href="./assets/hack.jpg">
+    <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+            color: #FFFFFF;
+        }
+
+        body {
+          display: flex;
+          flex-direction: column;
+          background: #000000;
+          height: 100vh;
+        }
+    
+        .members-count,
+        .members-list,
+        .messages {
+          border: 1px solid #e4e4e4;
+          padding: 15px;
+          margin-bottom: 15px;
+        }
+    
+        .messages {
+          flex-shrink: 1;
+          overflow: auto;
+        }
+    
+        .message {
+          padding: 5px 0;
+        }
+        .message .member {
+          display: inline-block;
+        }
+    
+        .member {
+          position: relative;
+        }
+    
+        .message-form {
+          display: flex;
+          flex-shrink: 0;
+        }
+        .message-form__input {
+          flex-grow: 1;
+          border: 1px solid #dfdfdf;
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+        .message-form__button {
+          margin: 10px;
+        }
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #262627;
+            align-items: center;
+            padding: 2rem 0rem;
+            height: 14vh;
+            width: 100%;
+        }
+
+        header .logo {
+            font-size: 2rem;
+            margin: 0rem 1.5rem;
+            color: rgb(3, 133, 3);
+        }
+
+        ul li {
+            margin-right: 1rem;
+        }
+
+        ul li a {
+            font-size: 1.3rem;
+            padding: 8px 10px;
+        }
+
+        ul li a.active,
+        ul li a:hover {
+            color:  rgb(3, 133, 3);
+            transition: 0.5s;
+            border-radius: 4px;;
+        }
+      </style>
+</head>
+<body style="overflow:hidden; margin: 0px;">
+    <header>
+        <div class="logo">
+            Under World
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./chat.html">Chat</a></li>
+                <li><a href="./unblocker.html">Unblocker</a></li>
+                <li><a href="./hacks.html">Hacks</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="members-count">-</div>
+    <div class="members-list">-</div>
+    <div class="messages"></div>
+    <form class="message-form" onsubmit="return false;">
+        <input class="message-form__input" style="color: #000;" placeholder="Type a message.." type="text"/>
+    </form>
+    <script src="./main.js"></script>
+</body>
+</html>
