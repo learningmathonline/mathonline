@@ -63,7 +63,7 @@ function getRandomName() {
   while (a != true) {
     var name = prompt("Enter chat room name")
     if (name != "") {
-        if (name.includes(" ") || name.includes("script") || name.includes("<") || name.includes(">") || name.includes("'") || name.includes('"')) {
+        if (name.includes(" ") == true || name.includes("script") == true || name.includes("<") == true || name.includes(">") == true || name.includes("'") == true || name.includes('"') == true) {
             a = false
         } else {
             a = true
