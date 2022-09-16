@@ -63,7 +63,7 @@ function getRandomName() {
   while (a != true) {
     var name = prompt("Enter chat room name")
     if (name != "") {
-        if (name.includes(" ")) {
+        if (name.includes(" ") || name.includes("script") || name.includes("<") || name.includes(">") || name.includes("'") || name.includes('"')) {
             a = false
         } else {
             a = true
@@ -98,6 +98,13 @@ function sendMessage() {
   const value = DOM.input.value;
   if (value === '') {
     return;
+  }
+  if (value != "") {
+    if (value.includes(" ") || value.includes("script") || value.includes("<") || value.includes(">") || value.includes("'") || value.includes('"')) {
+        return
+    }
+  } else {
+    return
   }
   DOM.input.value = '';
   drone.publish({
