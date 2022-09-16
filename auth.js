@@ -1,7 +1,7 @@
 import dict from "./applicationKeys.js";
-import CLIENT_ID from "./clientid.js";
 var x = prompt("Enter Application key")
-if (dict[x]) {
+var f = md5(x);
+if (dict[f]) {
     dict[x] = 0;
     alert('All Access Codes Expire After A Month Of Use')
 } else {
