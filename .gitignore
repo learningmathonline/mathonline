@@ -1,3 +1,5 @@
 .architect
-bootstrap.css
+style.css
 clientid.js
+auth.js
+main.js
