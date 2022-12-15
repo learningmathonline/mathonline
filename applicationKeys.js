@@ -1,5 +1,5 @@
 const dict = {
-    'e60fbd7445b7a1d87605c5afba117e8f': 1,
+    'cce857a648444a1ed7d4a132ea25c2da': 1,
 }
 
 export default dict;
